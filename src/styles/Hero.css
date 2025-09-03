@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 .hero {
   position: relative;
   width: 100%;
@@ -8,14 +7,16 @@
   overflow: hidden;
 }
 
+/* slides wrapper */
 .slides {
   display: flex;
   transition: transform 0.8s ease-in-out;
-  width: 100%;
+  will-change: transform;
 }
 
+/* each slide */
 .slide {
-  min-width: 100%;
+  flex: 0 0 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,42 +24,43 @@
   padding: 0 5%;
 }
 
+/* text column */
 .slide-text {
   flex: 1;
-  font-family:'Montserrat', sans-serif;
-  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
   color: #444;
   line-height: 1.3;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 
 .slide-text h2 {
   margin: 0;
-  font-size: 2.5rem;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);  /* responsive font */
   line-height: 1.3;
 }
 
 .slide-text .highlight {
-  color: #d63031; 
-  font-weight: 1200;
-  font-size: 1.5rem;
+  color: #d63031;
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.0rem);
 }
 
 .high {
   color:#d63031;
-  font-weight:normal;
+  font-weight: normal;
 }
 
-.null{
-  font-weight:normal;
+.null {
+  font-weight: normal;
 }
-
 
 .slide-text b {
   font-weight: 800;
   color: #000;
 }
 
+/* image column */
 .slide-img {
   flex: 1;
   display: flex;
@@ -67,7 +69,7 @@
 }
 
 .slide-img img {
-  max-width: 100%;
+  max-width: 80%;         /* don’t stretch full, keep centered */
   height: auto;
   object-fit: contain;
   display: block;
@@ -100,33 +102,24 @@
   color: #fff;
 }
 
-/* ✅ Responsive */
+/* ✅ Responsive tweaks */
 @media (max-width: 768px) {
   .slide {
-    flex-direction: row;        
+    flex-direction: row; /* still side by side */
     padding: 10px;
-    height: auto;
   }
 
   .slide-text {
     flex: 1;
-    font-size: 1.2rem;         
     padding-right: 10px;
   }
 
   .slide-text h2 {
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: clamp(1rem, 4vw, 1.5rem);
   }
 
   .slide-img img {
-    max-width: 120px;            
-    height: auto;
-  }
-
-  .arrows {
-    bottom: 5px;
-    left: 5px;
+    max-width: 85px;   /* fixed size on small screens */
   }
 
   .arrow {

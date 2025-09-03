@@ -6,7 +6,7 @@ const slides = [
     id: 1,
     text: (
       <>
-        <span className="highlight">WE</span><span className='high'>LOVE</span> <br /> &nbsp;&nbsp;&nbsp;&nbsp;<span className='null'>what we</span> <b>DO</b>
+        <span className="highlight">WE</span><span className='high'>LOVE</span> <br /> &nbsp;&nbsp;&nbsp;<span className='null'>what we</span> <b>DO</b>
       </>
     ),
     img: "10.png",
@@ -16,8 +16,7 @@ const slides = [
     id: 2,
     text: (
       <>
-        <span className="highlight">AFFORDABLE</span><span className='high'>SOLUTIONS</span> <br /> &nbsp;&nbsp;&nbsp;&nbsp;
-        <span className='null'>for better</span> <b>LIVING</b>
+        <span className="highlight">AFFORDABLE</span><span className='high'>SOLUTIONS</span><br/>&nbsp;&nbsp;&nbsp;<span className='null'>for better</span> <b>LIVING</b>
       </>
     ),
     img: "6.png",
@@ -28,7 +27,7 @@ const slides = [
     text: (
       <>
         <span className="highlight">TRANSFORMING</span><span className='high'>SPACES</span> <br />{" "}
-        &nbsp;&nbsp;&nbsp;&nbsp;<span className='null'>transforming</span> <b>LIVES</b>
+        &nbsp;&nbsp;&nbsp;<span className='null'>transforming</span> <b>LIVES</b>
       </>
     ),
     img: "5.png",
