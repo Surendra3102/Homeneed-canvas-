@@ -1,0 +1,101 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+}
+.logo::before {
+  content: ".";
+  color: #d63031;
+}
+
+/* 🔗 Desktop nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d63031;
+}
+
+.nav-links a.active {
+  color: #d63031;
+}
+
+.cart {
+  margin-left: 20px;
+  font-weight: 600;
+  white-space: nowrap; 
+}
+
+/* 🍔 Hamburger */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+/* 📱 Mobile styles */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: none; /* hidden by default */
+    width: 220px;
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .cart {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* ✨ Smooth slide-in */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,19 @@
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
+import "./App.css";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Gallery />
+      <Footer />
+    </>
+  );
+}
+
+export default App;
