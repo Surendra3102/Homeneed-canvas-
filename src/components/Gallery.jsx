@@ -17,10 +17,10 @@ const images = [
 ];
 
 const Gallery = () => {
-  const [visibleCount, setVisibleCount] = useState(6); // Show first 6 items
+  const [visibleCount, setVisibleCount] = useState(10); // Show first 10 items
 
   const showMore = () => {
-    setVisibleCount((prev) => prev + 6); // Load 6 more each time
+    setVisibleCount((prev) => prev + 4);
   };
 
   return (
