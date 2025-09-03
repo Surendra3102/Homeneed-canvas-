@@ -6,7 +6,9 @@ const slides = [
     id: 1,
     text: (
       <>
-        <span className="highlight">WE</span><span className='high'>LOVE</span> <br /> &nbsp;&nbsp;&nbsp;<span className='null'>what we</span> <b>DO</b>
+        <span className="highlight">WE</span><span className="high">LOVE</span>
+        <br />
+        &nbsp;&nbsp;&nbsp;<span className="null">what we</span> <b>DO</b>
       </>
     ),
     img: "10.png",
@@ -16,7 +18,11 @@ const slides = [
     id: 2,
     text: (
       <>
-        <span className="highlight">AFFORDABLE</span><span className='high'>SOLUTIONS</span><br/>&nbsp;&nbsp;&nbsp;<span className='null'>for better</span> <b>LIVING</b>
+        <span className="highlight">AFFORDABLE</span>
+        <span className="high">SOLUTIONS</span>
+        <br />
+        &nbsp;&nbsp;&nbsp;<span className="null">for better</span>{" "}
+        <b>LIVING</b>
       </>
     ),
     img: "6.png",
@@ -26,8 +32,11 @@ const slides = [
     id: 3,
     text: (
       <>
-        <span className="highlight">TRANSFORMING</span><span className='high'>SPACES</span> <br />{" "}
-        &nbsp;&nbsp;&nbsp;<span className='null'>transforming</span> <b>LIVES</b>
+        <span className="highlight">TRANSFORMING</span>
+        <span className="high">SPACES</span>
+        <br />
+        &nbsp;&nbsp;&nbsp;<span className="null">transforming</span>{" "}
+        <b>LIVES</b>
       </>
     ),
     img: "5.png",
@@ -38,15 +47,19 @@ const slides = [
 export default function Hero() {
   const [index, setIndex] = useState(0);
 
+  // Config: typingDuration + pause
+  const typingDuration = 3000; // ms (must match CSS animation-duration)
+  const pause = 1000; // ms
+  const slideInterval = typingDuration + pause;
+
   const showSlide = (i) => {
     setIndex((prev) => (i + slides.length) % slides.length);
   };
 
-  // Auto-slide
   useEffect(() => {
     const interval = setInterval(() => {
       showSlide(index + 1);
-    }, 4000);
+    }, slideInterval);
     return () => clearInterval(interval);
   }, [index]);
 
@@ -56,10 +69,13 @@ export default function Hero() {
         className="slides"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
-        {slides.map((slide) => (
+        {slides.map((slide, i) => (
           <div key={slide.id} className="slide">
             <div className="slide-text">
-              <h2>{slide.text}</h2>
+              {/* ✅ Force re-run typing animation when index changes */}
+              <h2 key={index}>
+                <span className="typing">{slide.text}</span>
+              </h2>
             </div>
             <div className="slide-img">
               <img src={slide.img} alt="slide" />

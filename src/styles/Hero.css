@@ -43,7 +43,7 @@
 .slide-text .highlight {
   color: #d63031;
   font-weight: 700;
-  font-size: clamp(1rem, 2vw, 1.0rem);
+  font-size: clamp(1rem, 2vw, 1rem);
 }
 
 .high {
@@ -60,6 +60,20 @@
   color: #000;
 }
 
+/* ✅ Typing effect */
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards;  /* 3s typing */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
 /* image column */
 .slide-img {
   flex: 1;
@@ -69,7 +83,7 @@
 }
 
 .slide-img img {
-  max-width: 80%;         /* don’t stretch full, keep centered */
+  max-width: 80%;         
   height: auto;
   object-fit: contain;
   display: block;
@@ -97,7 +111,6 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  border-radius: 0;
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
 }
@@ -105,7 +118,7 @@
 /* ✅ Responsive tweaks */
 @media (max-width: 768px) {
   .slide {
-    flex-direction: row; /* still side by side */
+    flex-direction: row; 
     padding: 10px;
   }
 
@@ -119,7 +132,7 @@
   }
 
   .slide-img img {
-    max-width: 85px;   /* fixed size on small screens */
+    max-width: 85px;   
   }
 
   .arrow {
