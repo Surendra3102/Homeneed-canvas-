@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,9 +11,10 @@
   z-index: 1000;
 }
 
+
 .logo {
   font-size: 24px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Pacifico', cursive;
   font-weight: bold;
   font-style: italic;
   color: black;

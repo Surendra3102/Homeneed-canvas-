@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 .hero {
   position: relative;
   width: 100%;
@@ -24,8 +25,8 @@
 
 .slide-text {
   flex: 1;
+  font-family:'Montserrat', sans-serif;
   font-size: 2.5rem;
-  font-weight: 600;
   color: #444;
   line-height: 1.3;
   padding-right: 2rem;
@@ -38,9 +39,20 @@
 }
 
 .slide-text .highlight {
-  color: #d63031; /* red */
-  font-weight: 700;
+  color: #d63031; 
+  font-weight: 1200;
+  font-size: 1.5rem;
 }
+
+.high {
+  color:#d63031;
+  font-weight:normal;
+}
+
+.null{
+  font-weight:normal;
+}
+
 
 .slide-text b {
   font-weight: 800;
