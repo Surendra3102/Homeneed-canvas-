@@ -9,7 +9,7 @@ const slides = [
         <span className="highlight">WE</span> LOVE <br /> what we <b>DO</b>
       </>
     ),
-    img: "/10.png",
+    img: "10.png",
     bg: "#f6f3f0",
   },
   {
@@ -20,7 +20,7 @@ const slides = [
         better <b>LIVING</b>
       </>
     ),
-    img: "/6.png",
+    img: "6.png",
     bg: "#f2f2f2",
   },
   {
@@ -31,7 +31,7 @@ const slides = [
         transforming <b>LIVES</b>
       </>
     ),
-    img: "/5.png",
+    img: "5.png",
     bg: "#fdfdfd",
   },
 ];
